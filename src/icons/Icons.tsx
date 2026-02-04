@@ -1,4 +1,4 @@
-import { Menu, X, type LucideProps } from "lucide-react";
+import { Laptop, Menu, Moon, SunMedium, X, type LucideProps } from "lucide-react";
 
 export const Icons = {
     // contact: Phone,
@@ -22,9 +22,9 @@ export const Icons = {
     // arrowRight: ArrowRight,
     // help: HelpCircle,
     // pizza: Pizza,
-    // sun: SunMedium,
-    // moon: Moon,
-    // laptop: Laptop,
+    sun: SunMedium,
+    moon: Moon,
+    laptop: Laptop,
     menu: Menu,
     // chevronDown: ChevronDown,
     // laughEmoji: BiLaugh,
