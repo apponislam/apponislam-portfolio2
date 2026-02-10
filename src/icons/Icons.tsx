@@ -1,6 +1,7 @@
 import { ChevronDown, ChevronRight, Home, Laptop, Menu, Moon, Phone, SunMedium, X, type LucideProps } from "lucide-react";
-import { BiLogoPostgresql } from "react-icons/bi";
+import { BiLogoPostgresql, BiSolidUser } from "react-icons/bi";
 import { FaDownload } from "react-icons/fa";
+import { HiBriefcase } from "react-icons/hi";
 import { SiBootstrap, SiCss3, SiExpress, SiGraphql, SiHtml5, SiJavascript, SiLinkedin, SiMongodb, SiMui, SiMysql, SiNestjs, SiNetlify, SiNextdotjs, SiNodedotjs, SiReact, SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 export const Icons = {
@@ -59,8 +60,8 @@ export const Icons = {
     // gmail: SiGmail,
     // twitter: FaTwitter,
     linkedin: SiLinkedin,
-    // userFill: BiSolidUser,
-    // work: HiBriefcase,
+    userFill: BiSolidUser,
+    work: HiBriefcase,
     // fiverr: TbBrandFiverr,
     home: Home,
     download: FaDownload,

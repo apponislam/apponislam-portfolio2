@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Icons } from "../../icons/Icons";
 import { Badge } from "../ui/badge";
+import ChipContainer from "./ChipContainer";
 
 interface ProjectCardProps {
     project: Project;
