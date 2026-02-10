@@ -19,6 +19,16 @@ const formSchema = z.object({
     social: z.string().url().optional().or(z.literal("")),
 });
 
+const GOOGLE_FORM_ID = "1FAIpQLSfmBwQ2yyYVOcVJ4GfRJV8TVIKzR4GW2RSG3BvlDekLaV1G-g";
+const GOOGLE_FORM_URL = `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/formResponse`;
+
+const GOOGLE_FORM_ENTRY_IDS = {
+    name: "entry.1633920210",
+    email: "entry.227649005",
+    message: "entry.790080973",
+    social: "entry.1770822543",
+};
+
 const ContactForm = () => {
     const storeModal = useModalStore();
 
@@ -35,8 +45,24 @@ const ContactForm = () => {
     async function onSubmit(values: z.infer<typeof formSchema>) {
         try {
             // Console log the data instead of API call
-            console.log("Form submitted with values:", values);
-            console.log("Form data (JSON):", JSON.stringify(values, null, 2));
+            // console.log("Form submitted with values:", values);
+            // console.log("Form data (JSON):", JSON.stringify(values, null, 2));
+
+            const formData = new URLSearchParams();
+            formData.append(GOOGLE_FORM_ENTRY_IDS.name, values.name);
+            formData.append(GOOGLE_FORM_ENTRY_IDS.email, values.email);
+            formData.append(GOOGLE_FORM_ENTRY_IDS.message, values.message);
+            formData.append(GOOGLE_FORM_ENTRY_IDS.social, values.social || "");
+
+            // Send POST request to Google Form
+            const response = await fetch(GOOGLE_FORM_URL, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors", // required to avoid CORS issues
+            });
+
+            console.log(response);
+            console.log("Form submitted successfully:", values);
 
             // Show success message
             form.reset();
