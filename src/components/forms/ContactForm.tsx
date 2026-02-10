@@ -1,5 +1,3 @@
-"use client";
-
 import * as z from "zod";
 import { Icons } from "../../icons/Icons";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
@@ -35,51 +33,26 @@ const ContactForm = () => {
     });
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
-        // Static form handling - show success message without API call
         try {
-            // Simulate form submission
+            // Console log the data instead of API call
             console.log("Form submitted with values:", values);
+            console.log("Form data (JSON):", JSON.stringify(values, null, 2));
 
             // Show success message
+            form.reset();
             storeModal.onOpen({
-                title: "Thank you!",
-                description: "Your message has been submitted successfully! (Note: This is a static demo - no actual message was sent)",
+                title: "Thankyou!",
+                description: "Your message has been received! I appreciate your contact and will get back to you shortly.",
                 icon: Icons.successAnimated,
             });
-
-            // Reset form
-            form.reset();
-
-            // Optionally, you can log to console or send to a static endpoint
-            // For a real implementation, you would need a backend endpoint
-            console.log("Form data:", JSON.stringify(values));
         } catch (err) {
-            console.error("Error:", err);
+            console.log("Err!", err);
             storeModal.onOpen({
                 title: "Oops!",
-                description: "There was an error submitting your message. Please try again.",
+                description: "Your message send failed.",
                 icon: Icons.failedAnimated,
             });
         }
-    }
-
-    // Alternative: Email submission using mailto
-    function onSubmitWithMail(values: z.infer<typeof formSchema>) {
-        const subject = `Contact Form Submission from ${values.name}`;
-        const body = `Name: ${values.name}\nEmail: ${values.email}\nSocial: ${values.social || "Not provided"}\n\nMessage:\n${values.message}`;
-
-        const mailtoLink = `mailto:your-email@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        window.location.href = mailtoLink;
-
-        // Show success message
-        storeModal.onOpen({
-            title: "Email Client Opened",
-            description: "Your email client has been opened with the message details. Please send the email to complete your submission.",
-            icon: Icons.successAnimated,
-        });
-
-        form.reset();
     }
 
     return (
@@ -92,7 +65,7 @@ const ContactForm = () => {
                         <FormItem>
                             <FormLabel>Name</FormLabel>
                             <FormControl>
-                                <Input placeholder="Enter your name" {...field} className="w-full" />
+                                <Input placeholder="Enter your name" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -105,7 +78,7 @@ const ContactForm = () => {
                         <FormItem>
                             <FormLabel>Email</FormLabel>
                             <FormControl>
-                                <Input placeholder="Enter your email" {...field} type="email" className="w-full" />
+                                <Input placeholder="Enter your email" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -118,7 +91,7 @@ const ContactForm = () => {
                         <FormItem>
                             <FormLabel>Message</FormLabel>
                             <FormControl>
-                                <Textarea placeholder="Enter your message" {...field} rows={5} className="w-full min-h-30 resize-y" />
+                                <Textarea placeholder="Enter your message" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
@@ -131,31 +104,13 @@ const ContactForm = () => {
                         <FormItem>
                             <FormLabel>Social (optional)</FormLabel>
                             <FormControl>
-                                <Input placeholder="Link for social account (e.g., LinkedIn, GitHub)" {...field} className="w-full" />
+                                <Input placeholder="Link for social account" {...field} />
                             </FormControl>
                             <FormMessage />
                         </FormItem>
                     )}
                 />
-                <div className="flex gap-4">
-                    <Button type="submit" className="flex-1">
-                        Submit Message
-                    </Button>
-                    <Button type="button" variant="outline" onClick={() => form.handleSubmit(onSubmitWithMail)()} className="flex-1">
-                        Send via Email
-                    </Button>
-                </div>
-
-                <div className="text-sm text-muted-foreground mt-4 p-3 bg-muted rounded-md">
-                    <p className="font-medium mb-1">Note:</p>
-                    <p>This is a static contact form. In a real implementation, you would need:</p>
-                    <ul className="list-disc pl-5 mt-2 space-y-1">
-                        <li>A backend API endpoint to receive form submissions</li>
-                        <li>Email service integration</li>
-                        <li>Database to store messages</li>
-                        <li>Spam protection</li>
-                    </ul>
-                </div>
+                <Button type="submit">Submit</Button>
             </form>
         </Form>
     );
