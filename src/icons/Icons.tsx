@@ -1,8 +1,9 @@
 import { ChevronDown, ChevronRight, Home, Laptop, Menu, Moon, Phone, SunMedium, X, type LucideProps } from "lucide-react";
 import { BiLogoPostgresql, BiSolidUser } from "react-icons/bi";
-import { FaDownload } from "react-icons/fa";
+import { BsInfoCircle } from "react-icons/bs";
+import { FaDownload, FaTwitter } from "react-icons/fa";
 import { HiBriefcase } from "react-icons/hi";
-import { SiBootstrap, SiCss3, SiExpress, SiGraphql, SiHtml5, SiJavascript, SiLinkedin, SiMongodb, SiMui, SiMysql, SiNestjs, SiNetlify, SiNextdotjs, SiNodedotjs, SiReact, SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { SiBootstrap, SiCss3, SiExpress, SiGmail, SiGraphql, SiHtml5, SiJavascript, SiLinkedin, SiMongodb, SiMui, SiMysql, SiNestjs, SiNetlify, SiNextdotjs, SiNodedotjs, SiReact, SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 export const Icons = {
     contact: Phone,
@@ -33,7 +34,7 @@ export const Icons = {
     chevronDown: ChevronDown,
     // laughEmoji: BiLaugh,
     // check: Check,
-    // infoMark: BsInfoCircle,
+    infoMark: BsInfoCircle,
     // questionMark: BsQuestionCircle,
     // link: HiOutlineLink,
     // externalLink: HiOutlineExternalLink,
@@ -57,8 +58,8 @@ export const Icons = {
     // socketio: SiSocketdotio,
     tailwindcss: SiTailwindcss,
     typescript: SiTypescript,
-    // gmail: SiGmail,
-    // twitter: FaTwitter,
+    gmail: SiGmail,
+    twitter: FaTwitter,
     linkedin: SiLinkedin,
     userFill: BiSolidUser,
     work: HiBriefcase,

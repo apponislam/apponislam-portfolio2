@@ -2,8 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
 import { RootLayout } from "../providers/RootLayout";
 import NotFoundPage from "../components/NotFoundPage";
-
-// Lazy pages
+import SkillsPage from "../components/root/SkillPage";
 
 const HomePage = lazy(() => import("../components/HomePage"));
 
@@ -14,6 +13,10 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <HomePage />,
+            },
+            {
+                path: "/skills",
+                element: <SkillsPage />,
             },
         ],
     },
