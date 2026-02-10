@@ -1,8 +1,9 @@
-import { ChevronDown, ChevronRight, Home, Laptop, Menu, Moon, Phone, SunMedium, X, type LucideProps } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, Home, Laptop, Menu, Moon, Phone, SunMedium, X, type LucideProps } from "lucide-react";
+import { AiFillStar } from "react-icons/ai";
 import { BiLogoPostgresql, BiSolidUser } from "react-icons/bi";
 import { BsInfoCircle } from "react-icons/bs";
 import { FaDownload, FaTwitter } from "react-icons/fa";
-import { HiBriefcase } from "react-icons/hi";
+import { HiBriefcase, HiOutlineExternalLink } from "react-icons/hi";
 import { SiBootstrap, SiCss3, SiExpress, SiGmail, SiGraphql, SiHtml5, SiJavascript, SiLinkedin, SiMongodb, SiMui, SiMysql, SiNestjs, SiNetlify, SiNextdotjs, SiNodedotjs, SiReact, SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 export const Icons = {
@@ -12,7 +13,7 @@ export const Icons = {
     // gitBranch: IoIosGitBranch,
     close: X,
     // spinner: Loader2,
-    // chevronLeft: ChevronLeft,
+    chevronLeft: ChevronLeft,
     chevronRight: ChevronRight,
     // trash: Trash,
     // post: FileText,
@@ -37,8 +38,8 @@ export const Icons = {
     infoMark: BsInfoCircle,
     // questionMark: BsQuestionCircle,
     // link: HiOutlineLink,
-    // externalLink: HiOutlineExternalLink,
-    // star: AiFillStar,
+    externalLink: HiOutlineExternalLink,
+    star: AiFillStar,
     // angular: SiAngular,
     bootstrap: SiBootstrap,
     css3: SiCss3,
