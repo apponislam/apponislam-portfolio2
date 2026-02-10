@@ -5,10 +5,7 @@
 /* CalSans for headings */
 @font-face {
     font-family: "CalSans-SemiBold";
-    src:
-        url("/fonts/CalSans-SemiBold.woff2") format("woff2"),
-        url("/fonts/CalSans-SemiBold.woff") format("woff"),
-        url("/fonts/CalSans-SemiBold.ttf") format("truetype");
+    src: url("/fonts/CalSans-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -178,12 +175,6 @@
     100% {
         transform: translateY(-10px);
     }
-}
-
-@font-face {
-    font-family: "CalSans-SemiBold";
-    src: url("../assets/fonts/CalSans-SemiBold.woff2") format("woff2");
-    font-weight: 600;
 }
 
 .font-heading {
