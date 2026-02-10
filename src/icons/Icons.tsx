@@ -1,4 +1,4 @@
-import { Laptop, Menu, Moon, SunMedium, X, type LucideProps } from "lucide-react";
+import { Home, Laptop, Menu, Moon, SunMedium, X, type LucideProps } from "lucide-react";
 
 export const Icons = {
     // contact: Phone,
@@ -59,7 +59,7 @@ export const Icons = {
     // userFill: BiSolidUser,
     // work: HiBriefcase,
     // fiverr: TbBrandFiverr,
-    // home: FaHome,
+    home: Home,
     // download: FaDownload,
     // amazonaws: FaAws,
     // google: FcGoogle,
