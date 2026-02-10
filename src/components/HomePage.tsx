@@ -3,6 +3,7 @@ import { Icons } from "../icons/Icons";
 import { cn } from "../lib/utils";
 import { Button, buttonVariants } from "./ui/button";
 import { pagesConfig } from "../config/pages";
+import ScrollButton from "./root/ScrollButton";
 
 const HomePage = () => {
     return (
@@ -52,7 +53,7 @@ const HomePage = () => {
                             </Link>
                         </div>
 
-                        {/* <ScrollButton></ScrollButton> */}
+                        <ScrollButton></ScrollButton>
                     </div>
                 </section>
                 <section id="skills" className="md:container space-y-6 bg-slate-50 dark:bg-transparent py-10">
