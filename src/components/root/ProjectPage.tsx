@@ -8,13 +8,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import ProjectCard from "./ProjectCard";
 import { cn } from "../../lib/utils";
 
-// import PageHeader from "@/components/page-header";
-// import { pagesConfig } from "@/components/config/pages";
-// import { cn } from "@/lib/utils";
-// import ProjectCard from "@/components/project-card";
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-// import { projectsData, Project } from "@/lib/data/projects";
-
 function ProjectContainer({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
     return <div className={cn("flex items-center justify-center mb-4 md:mb-0 [&>div]:w-full ", className)} {...props} />;
 }
