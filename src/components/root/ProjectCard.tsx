@@ -7,6 +7,7 @@ import type { Project } from "../../data/projects";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Icons } from "../../icons/Icons";
+import { Badge } from "../ui/badge";
 
 interface ProjectCardProps {
     project: Project;

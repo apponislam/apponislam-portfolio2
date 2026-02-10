@@ -3,6 +3,7 @@ import { pagesConfig } from "../../config/pages";
 import { Button } from "../ui/button";
 import { Icons } from "../../icons/Icons";
 import { featuredProjects } from "../../data/projects";
+import ProjectCard from "./ProjectCard";
 
 export async function FeaturedProjects() {
     // const featuredProjects = await getFeaturedProjects();
@@ -16,7 +17,7 @@ export async function FeaturedProjects() {
 
             <div className="mx-auto grid justify-center gap-4 md:w-full lg:grid-cols-3 2xl:w-300">
                 {featuredProjects.map((project) => (
-                    <ProjectCard key={project._id} project={project} />
+                    <ProjectCard key={project.id} project={project} />
                 ))}
             </div>
 
