@@ -7,12 +7,21 @@ import { pagesConfig } from "../../config/pages";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs";
 import ProjectCard from "./ProjectCard";
 import { cn } from "../../lib/utils";
+import { useSEO } from "@/hooks/useSEO";
 
 function ProjectContainer({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {
     return <div className={cn("flex items-center justify-center mb-4 md:mb-0 [&>div]:w-full ", className)} {...props} />;
 }
 
 const ProjectsPage = () => {
+    useSEO({
+        title: "Projects | Md. Appon Islam (aponislam) Portfolio",
+        description: "Explore my portfolio projects, web applications, and front-end development work built with modern technologies.",
+        ogTitle: "Projects | Md. Appon Islam (aponislam) Portfolio",
+        ogDescription: "Explore my portfolio projects, web applications, and front-end development work built with modern technologies.",
+        ogImage: "https://4ppon.com/apponislam.png",
+    });
+
     const [filteredProjects, setFilteredProjects] = useState<Project[]>(projectsData);
 
     const handleTabChange = (value: string) => {

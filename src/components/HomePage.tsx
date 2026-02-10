@@ -7,8 +7,17 @@ import ScrollButton from "./root/ScrollButton";
 import SkillsCard from "./root/SkillsCard";
 import { skillsData } from "../data/skills";
 import { FeaturedProjects } from "./root/FeaturedProject";
+import { useSEO } from "@/hooks/useSEO";
 
 const HomePage = () => {
+    useSEO({
+        title: "Md. Appon Islam (apponislam) | Portfolio",
+        description: "Welcome to my portfolio website. Explore my projects, skills, and work experience.",
+        ogTitle: "Md. Appon Islam (apponislam) | Portfolio",
+        ogDescription: "Welcome to my portfolio website. Explore my projects, skills, and work experience.",
+        ogImage: "https://4ppon.com/apponislam.png",
+    });
+
     return (
         <>
             <div className="container mx-auto">
