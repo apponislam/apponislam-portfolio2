@@ -2,6 +2,35 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* CalSans for headings */
+@font-face {
+    font-family: "CalSans-SemiBold";
+    src:
+        url("/fonts/CalSans-SemiBold.woff2") format("woff2"),
+        url("/fonts/CalSans-SemiBold.woff") format("woff"),
+        url("/fonts/CalSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Inter for body text */
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/fonts/Inter-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -78,6 +107,8 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+    --font-sans: "Inter", system-ui, sans-serif;
+    --font-heading: "CalSans-SemiBold", system-ui, sans-serif;
 }
 
 .dark {
@@ -125,4 +156,36 @@
 
 .font-norican {
     font-family: "Norican", cursive;
+}
+
+.downarrow {
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+    cursor: pointer;
+}
+@-webkit-keyframes mover {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+@keyframes mover {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@font-face {
+    font-family: "CalSans-SemiBold";
+    src: url("../assets/fonts/CalSans-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+}
+
+.font-heading {
+    font-family: "CalSans-SemiBold";
 }

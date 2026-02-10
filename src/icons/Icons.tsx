@@ -1,7 +1,9 @@
-import { Home, Laptop, Menu, Moon, SunMedium, X, type LucideProps } from "lucide-react";
+import { ChevronDown, Home, Laptop, Menu, Moon, Phone, SunMedium, X, type LucideProps } from "lucide-react";
+import { FaDownload } from "react-icons/fa";
+import { SiLinkedin } from "react-icons/si";
 
 export const Icons = {
-    // contact: Phone,
+    contact: Phone,
     // gitRepoIcon: BookMarked,
     // gitOrgBuilding: Building,
     // gitBranch: IoIosGitBranch,
@@ -26,7 +28,7 @@ export const Icons = {
     moon: Moon,
     laptop: Laptop,
     menu: Menu,
-    // chevronDown: ChevronDown,
+    chevronDown: ChevronDown,
     // laughEmoji: BiLaugh,
     // check: Check,
     // infoMark: BsInfoCircle,
@@ -55,12 +57,12 @@ export const Icons = {
     // typescript: SiTypescript,
     // gmail: SiGmail,
     // twitter: FaTwitter,
-    // linkedin: SiLinkedin,
+    linkedin: SiLinkedin,
     // userFill: BiSolidUser,
     // work: HiBriefcase,
     // fiverr: TbBrandFiverr,
     home: Home,
-    // download: FaDownload,
+    download: FaDownload,
     // amazonaws: FaAws,
     // google: FcGoogle,
     // facebook: FaFacebook,
