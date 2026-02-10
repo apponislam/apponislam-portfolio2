@@ -1,4 +1,3 @@
-"use client";
 import { useTheme } from "../../hooks/useTheme";
 import { Icons } from "../../icons/Icons";
 import { Button } from "../ui/button";

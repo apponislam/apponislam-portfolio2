@@ -1,5 +1,3 @@
-"use client";
-
 import aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -38,7 +36,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     ))}
                 </div>
                 <Link to={`/projects/${project.id}`}>
-                    <Button variant={"default"} className="mt-2">
+                    <Button variant={"default"} className="mt-2 cursor-pointer">
                         Read more
                         <Icons.chevronRight className="w-4 ml-1" />
                     </Button>

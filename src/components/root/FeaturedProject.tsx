@@ -5,9 +5,7 @@ import { Icons } from "../../icons/Icons";
 import { featuredProjects } from "../../data/projects";
 import ProjectCard from "./ProjectCard";
 
-export async function FeaturedProjects() {
-    // const featuredProjects = await getFeaturedProjects();
-
+export function FeaturedProjects() {
     return (
         <section id="projects" className="md:container space-y-6 dark:bg-transparent py-10 my-14">
             <div className="mx-auto flex max-w-232 flex-col items-center space-y-4 text-center">
@@ -22,7 +20,7 @@ export async function FeaturedProjects() {
             </div>
 
             <Link to="/projects" className="flex justify-center">
-                <Button variant={"outline"} className="rounded-xl">
+                <Button variant={"outline"} className="rounded-xl cursor-pointer">
                     <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
                 </Button>
             </Link>

@@ -6,6 +6,7 @@ import { pagesConfig } from "../config/pages";
 import ScrollButton from "./root/ScrollButton";
 import SkillsCard from "./root/SkillsCard";
 import { skillsData } from "../data/skills";
+import { FeaturedProjects } from "./root/FeaturedProject";
 
 const HomePage = () => {
     return (
@@ -67,13 +68,13 @@ const HomePage = () => {
                     <SkillsCard skills={skillsData.slice(0, 6)} />
                     {/* <HomeSkills></HomeSkills> */}
                     <Link to="/skills" className="flex justify-center">
-                        <Button variant={"outline"} className="rounded-xl">
+                        <Button variant={"outline"} className="rounded-xl cursor-pointer">
                             <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
                         </Button>
                     </Link>
                 </section>
 
-                {/* <FeaturedProjects /> */}
+                <FeaturedProjects />
             </div>
         </>
     );
