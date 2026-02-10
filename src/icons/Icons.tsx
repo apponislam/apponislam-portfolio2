@@ -1,6 +1,7 @@
-import { ChevronDown, Home, Laptop, Menu, Moon, Phone, SunMedium, X, type LucideProps } from "lucide-react";
+import { ChevronDown, ChevronRight, Home, Laptop, Menu, Moon, Phone, SunMedium, X, type LucideProps } from "lucide-react";
+import { BiLogoPostgresql } from "react-icons/bi";
 import { FaDownload } from "react-icons/fa";
-import { SiLinkedin } from "react-icons/si";
+import { SiBootstrap, SiCss3, SiExpress, SiGraphql, SiHtml5, SiJavascript, SiLinkedin, SiMongodb, SiMui, SiMysql, SiNestjs, SiNetlify, SiNextdotjs, SiNodedotjs, SiReact, SiRedux, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 export const Icons = {
     contact: Phone,
@@ -10,7 +11,7 @@ export const Icons = {
     close: X,
     // spinner: Loader2,
     // chevronLeft: ChevronLeft,
-    // chevronRight: ChevronRight,
+    chevronRight: ChevronRight,
     // trash: Trash,
     // post: FileText,
     // page: File,
@@ -37,24 +38,24 @@ export const Icons = {
     // externalLink: HiOutlineExternalLink,
     // star: AiFillStar,
     // angular: SiAngular,
-    // bootstrap: SiBootstrap,
-    // css3: SiCss3,
-    // express: SiExpress,
-    // graphql: SiGraphql,
-    // html5: SiHtml5,
-    // javascript: SiJavascript,
-    // mongodb: SiMongodb,
-    // mui: SiMui,
-    // mysql: SiMysql,
-    // nestjs: SiNestjs,
-    // netlify: SiNetlify,
-    // nextjs: SiNextdotjs,
-    // nodejs: SiNodedotjs,
-    // react: SiReact,
-    // redux: SiRedux,
+    bootstrap: SiBootstrap,
+    css3: SiCss3,
+    express: SiExpress,
+    graphql: SiGraphql,
+    html5: SiHtml5,
+    javascript: SiJavascript,
+    mongodb: SiMongodb,
+    mui: SiMui,
+    mysql: SiMysql,
+    nestjs: SiNestjs,
+    netlify: SiNetlify,
+    nextjs: SiNextdotjs,
+    nodejs: SiNodedotjs,
+    react: SiReact,
+    redux: SiRedux,
     // socketio: SiSocketdotio,
-    // tailwindcss: SiTailwindcss,
-    // typescript: SiTypescript,
+    tailwindcss: SiTailwindcss,
+    typescript: SiTypescript,
     // gmail: SiGmail,
     // twitter: FaTwitter,
     linkedin: SiLinkedin,
@@ -68,7 +69,7 @@ export const Icons = {
     // facebook: FaFacebook,
     // edit: CiEdit,
     // moreVertical: CgMoreVerticalAlt,
-    // postgres: BiLogoPostgresql,
+    postgres: BiLogoPostgresql,
     gitHub: ({ ...props }: LucideProps) => (
         <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" {...props}>
             <path

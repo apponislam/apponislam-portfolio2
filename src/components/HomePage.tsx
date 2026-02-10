@@ -4,6 +4,8 @@ import { cn } from "../lib/utils";
 import { Button, buttonVariants } from "./ui/button";
 import { pagesConfig } from "../config/pages";
 import ScrollButton from "./root/ScrollButton";
+import SkillsCard from "./root/SkillsCard";
+import { skillsData } from "../data/skills";
 
 const HomePage = () => {
     return (
@@ -56,12 +58,13 @@ const HomePage = () => {
                         <ScrollButton></ScrollButton>
                     </div>
                 </section>
-                <section id="skills" className="md:container space-y-6 bg-slate-50 dark:bg-transparent py-10">
+                <section id="skills" className="md:container mx-4 md:mx-0 space-y-6 bg-slate-50 dark:bg-transparent py-10">
                     <div className="mx-auto flex max-w-232 flex-col items-center space-y-4 text-center">
                         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">{pagesConfig.skills.title}</h2>
                         <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">{pagesConfig.skills.description}</p>
                     </div>
                     {/* <SkillsCard skills={featuredSkills} /> */}
+                    <SkillsCard skills={skillsData.slice(0, 6)} />
                     {/* <HomeSkills></HomeSkills> */}
                     <Link to="/skills" className="flex justify-center">
                         <Button variant={"outline"} className="rounded-xl">
